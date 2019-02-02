@@ -42,8 +42,10 @@ ENV LANG=C.UTF-8
 RUN pip install sqlalchemy && \
 	pip install psycopg2
 
+# Modify Jupyter config
+COPY jupyter_notebook_config.py jupyter_notebook_config.py
 
 # Expose Jupyter port & cmd
 EXPOSE 8888
-RUN mkdir -p /code
-CMD jupyter lab --ip=* --port=8888 --no-browser --notebook-dir=/code --allow-root
+RUN mkdir -p /opt/app/data
+CMD jupyter lab --ip=* --port=8888 --no-browser --notebook-dir=/opt/app/data --allow-root --config='/jupyter_notebook_config.py'

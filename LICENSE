@@ -1,0 +1,23 @@
+
+-- ENTER YOUR LICENSE HERE --
+
+----
+
+This software uses the following libraries:
+(Keep this notice with every copy and distribution of this software)
+
+* JupyterLab-Configuration (https://github.com/lean-data-science/jupyterlab-configuration)
+  Copyright (c) 2018, Dr. Frank Zickert
+  -- BSD 3-Clause License --
+  https://github.com/lean-data-science/jupyterlab-configuration/blob/master/LICENSE
+
+* Jupyterlab (https://github.com/jupyterlab/jupyterlab)
+  Copyright (c) 2015 Project Jupyter Contributors
+  (https://github.com/jupyterlab/jupyterlab/blob/master/LICENSE)
+  
+* Docker-in-Docker (https://github.com/jpetazzo/dind)
+  Copyright (c) 2014, Jérôme Petazzoni
+  -- Apache License 2.0 --
+  https://github.com/jpetazzo/dind/blob/master/LICENSE
+
+  
