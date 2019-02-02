@@ -2,9 +2,11 @@ version: '3'
 services:
 
   datascience:
-    image: mikebirdgeneau/jupyterlab
+    # image: mikebirdgeneau/jupyterlab
+    build: .
     ports:
       - "8888:8888"
     volumes:
-      - ${PWD}:/opt/app/data
+      # - [ ] @NOTE: (2019-02-02) this is the default Jupyter start dir
+      - ${PWD}:/code
 
