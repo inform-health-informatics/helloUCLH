@@ -5,12 +5,6 @@ FROM ubuntu:18.04
 ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN true
 
-
-ENV http_proxy $http_proxy
-ENV HTTP_PROXY $HTTP_PROXY
-ENV https_proxy $https_proxy
-ENV HTTPS_PROXY $HTTPS_PROXY
-
 RUN apt-get update
 RUN apt-get -y upgrade
 RUN apt-get install -y build-essential  \

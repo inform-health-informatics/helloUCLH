@@ -33,7 +33,7 @@ def gen_connection_string(d, engine='postgresql'):
         else:
             return 'host={host} dbname={database} user={user} port={port}'.format(**d)
 
-DSN = gen_connection_string(conn_try, engine='psycopg2')
+DSN = gen_connection_string(conn_ids, engine='psycopg2')
 
 # SQL = 'SELECT COUNT(*) FROM measurement'
 
