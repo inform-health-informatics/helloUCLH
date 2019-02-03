@@ -3,27 +3,46 @@
 import time
 
 the_boss = 'Niall'
+
+intro = """
+
+EMAP has been built
+
+    ... here at UCLH
+
+    ... for the NHS
+
+according to the following principles ...
+
+"""
+
 emap_principles = """
 1. Protection of operational systems
-2. Protection of patient privacy:    A 'code to data' rather than 'data to code' paradigm
+2. Protection of patient privacy:\n   A 'code to data' rather than 'data to code' paradigm
 3. Near real-time over retrospective batch loads
 4. Interoperability for semantic collaboration
 5. Scalable through open source
 """
 
-print('Hello', the_boss)
+def type_text(s, pause):
+    for c in list(s):
+        time.sleep(pause)
+        print(c, end='', flush=True)
+    print('\n', end='', flush=True)
+
+
+hello = '\nHello ' + the_boss + '\n'
+type_text(hello, 0.02)
+
 response = input('Shall I continue? ')
 if response:
-    text = '\nEMAP has been built for the NHS at UCLH according to the following principles ...\n'
-    text = text + emap_principles
+    text = intro + emap_principles
     for l in text.splitlines():
         time.sleep(0.3)
-        for c in list(l):
-            time.sleep(0.02)
-            print(c, end='', flush=True)
-        print('\n', flush=True)
-
+        type_text(l, 0.02)
 
 time.sleep(1)
-print('Thank you and goodbye')
+goodbye = '\nThank you and goodbye\n'
+type_text(goodbye, 0.02)
+
 
