@@ -8,5 +8,5 @@ cp -r ${CONFIG_PATH}/jupyter_notebook_config.py ~/.jupyter/
 
 cd ${MAIN_PATH}
 
-mkdir notebooks
+# mkdir notebooks
 jupyter lab

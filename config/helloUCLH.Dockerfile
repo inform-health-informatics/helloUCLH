@@ -69,6 +69,8 @@ ENV NOTEBOOK_PATH=${MAIN_PATH}/notebooks
 RUN pip install -U pandas numpy scipy matplotlib altair
 RUN pip install -U sqlalchemy psycopg2
 
-EXPOSE 8889
+RUN pip install -U hl7apy
+
+EXPOSE 8888
 
 CMD cd ${MAIN_PATH} && sh config/run_jupyter.sh
