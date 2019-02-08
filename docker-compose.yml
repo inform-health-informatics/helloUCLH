@@ -16,3 +16,5 @@ services:
     volumes:
       - ${PWD}:/usr/local/bin/helloUCLH
     privileged: true
+    environment:
+      - "PYTHONUNBUFFERED=1"
